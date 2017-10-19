@@ -1,0 +1,21 @@
+<header class="header">
+    <h1>购物车</h1>
+</header>
+<section class="section">
+
+    <shop data="data"></shop>
+</section>
+
+<footer class="footer">
+    <div class="all">
+        <label ng-class="{on:flag}" ng-click="all()">
+            <i class="fa fa-check"></i>
+        </label><span>全选</span>
+
+    </div>
+    <div class="right">
+
+        <div>合计：<b class="text-orange">￥</b><span class="text-orange">{{sumPrice}}</span></div>
+        <button>结算({{sum}})</button>
+    </div>
+</footer>

@@ -1,0 +1,30 @@
+<div class="list">
+    <div class="item" ng-repeat="key in data" index="{$index}">
+        <div>
+            <label ng-class="{on:key.state}" ng-click="check($index)">
+                <i class="fa fa-check"></i>
+            </label>
+        </div>
+        <dl>
+            <dt>
+                <img src="{{key.src}}" alt="">
+            </dt>
+            <dd>
+                <p>{{key.name}}</p>
+
+                <p class="text-nobr">{{key.text}}</p>
+
+                <p>单价：<span class="price pr10">{{key.price}}</span>小计：<span class="sum">{{key.price*key.count}}</span></p>
+            </dd>
+        </dl>
+        <aside ng-click="del($index)">
+            <i class="fa fa-times-circle-o text-gray"></i>
+        </aside>
+        <main>
+            <span ng-click="countItem('-',$index)">-</span>
+            <input type="text" value="{{key.count}}" readonly>
+            <span ng-click="countItem('+',$index)">+</span>
+        </main>
+    </div>
+
+</div>
