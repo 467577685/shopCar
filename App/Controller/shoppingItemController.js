@@ -1,10 +1,7 @@
 /**
  * Created by 123 on 2017/10/18.
  */
-app.controller("shoppingItemController",["$scope","shoppingServer",function($scope,shoppingServer){
-    shoppingServer.getData().then(function(result){
-        $scope.data = result.data;
-    });
+app.controller("shoppingItemController",function($scope){
     $scope.del = function(index){
         $scope.$emit("del",index);
     };
@@ -26,4 +23,4 @@ app.controller("shoppingItemController",["$scope","shoppingServer",function($sco
     };
 
 
-}]);
+});
